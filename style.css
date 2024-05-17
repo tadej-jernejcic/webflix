@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+body {
+	margin: 0;
+	background-color: whitesmoke;
+	font-family: "Inconsolata", monospace;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.watchlist {
+	position: absolute;
+	right: 1rem;
+}
+
+.watchlist:hover {
+	color: #ffc72c;
+}
+
+.logo {
+	text-align: center;
+	font-family: "Kode Mono", monospace;
+	font-weight: 500;
+	margin-top: 50px;
+}
+
+#results,
+.extra {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.movie {
+	display: flex;
+	margin: 0 50px 20px;
+	padding: 50px 20px;
+	border-bottom: 1px solid lightgray;
+	animation: fadeInAnimation 2s ease-in-out forwards;
+	opacity: 0;
+}
+
+#searchForm {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	margin: 50px 0;
+}
+
+#searchInput {
+	border: 0;
+	width: 50rem;
+	height: 50px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	padding-left: 15px;
+}
+
+#searchInput:focus {
+	outline: none;
+	border: 1px solid #ffc72c;
+}
+
+#searchButton {
+	height: 54.5px;
+	width: 75px;
+	font-size: 32px;
+	background-color: black;
+	color: whitesmoke;
+	border-radius: 0 5px 5px 0;
+	border: 0;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	overflow: hidden;
+}
+
+.exactSearch,
+.watchlist {
+	background-color: white;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.exactSearch {
+	color: black;
+	margin-left: 10px;
+}
+.exactSearch:hover,
+#searchButton:hover,
+.logo:hover,
+.watchlist:hover {
+	cursor: pointer;
+}
+
+.poster {
+	margin-right: 50px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	width: 300px;
+	height: 430px;
+}
+
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: "Kode Mono", monospace;
+}
+
+.title a {
+	text-decoration: none;
+	color: black;
+}
+
+.description {
+	font-size: 18px;
+}
+
+.error {
+	margin: auto;
+	font-weight: bold;
+}
+
+.imdbButton,
+.favoriteButton,
+.unfavoriteButton {
+	appearance: none;
+	background-color: #000000;
+	border: 1px solid #1a1a1a;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	line-height: normal;
+	margin: 0;
+	min-height: 60px;
+	min-width: 0;
+	outline: none;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	will-change: transform;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	margin-right: 10px;
+}
+
+.favoriteButton,
+.unfavoriteButton {
+	position: absolute;
+	right: 10px;
+	background-color: white;
+	color: black;
+}
+.imdbButton:hover,
+.favoriteButton:hover,
+.unfavoriteButton:hover {
+	color: #ffc72c;
+}
+
+.year {
+	display: block;
+	position: absolute;
+	right: 0;
+}
+
+.extra * {
+	margin: 0 50px 0 0;
+	color: gray;
+	font-size: 18px;
+}
+
+.extra span {
+	margin: 0;
+}
+
+.people * {
+	color: rgb(121, 121, 121);
+	font-size: 16px;
+}
+
+@keyframes fadeInAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
