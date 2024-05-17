@@ -11,6 +11,10 @@ Webflix is a web application that serves as an alternative minimal frontend to I
     Watchlist: Users can add movies to their watchlist for later viewing.
     IMDb Integration: Utilizes the OMDB API to fetch movie data, providing an alternative interface to IMDb.
 
+## Live Demo
+
+A live demo of the app can be found [here.](https://webflix-woad.vercel.app/)
+
 ## Technologies Used
 
     HTML/CSS/JavaScript: Frontend development.
@@ -19,6 +23,10 @@ Webflix is a web application that serves as an alternative minimal frontend to I
     Local Storage: Stores watchlist data locally on the user's browser.
 
 ## Getting Started
+
+To begin using Webflix, you'll need an OMDB API key. Store your API key in a .env file in the root of the project in the following format:
+
+VITE_API_KEY="XXXXXX"
 
 ```bash
     git clone https://github.com/tadej-jernejcic/webflix.git
