@@ -5,6 +5,7 @@ body {
 	margin: 0;
 	background-color: whitesmoke;
 	font-family: "Inconsolata", monospace;
+	padding: 1rem;
 }
 
 header {
@@ -69,7 +70,7 @@ header {
 #searchButton {
 	height: 54.5px;
 	width: 75px;
-	font-size: 32px;
+	font-size: 1rem;
 	background-color: black;
 	color: whitesmoke;
 	border-radius: 0 5px 5px 0;
@@ -103,6 +104,11 @@ header {
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	width: 300px;
 	height: 430px;
+	min-width: 300px;
+	min-height: 430px;
+	background: rgb(241, 236, 236);
+	text-align: center;
+	font-size: 0;
 }
 
 .title {
@@ -194,5 +200,20 @@ header {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@media (max-width: 800px) {
+	.movie {
+		display: block;
+		width: 100%;
+	}
+	.poster {
+		display: block;
+		margin: 0 auto;
+	}
+	.exactSearch,
+	.watchlist {
+		display: none !important;
 	}
 }
